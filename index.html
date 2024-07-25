@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação do Projeto</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .slide { display: none; }
+        .active { display: block; animation: fadeIn 1s; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center text-white">
+    <div class="w-full max-w-4xl p-8 bg-white bg-opacity-20 rounded-lg shadow-lg">
+        <div id="slide-1" class="slide active text-center">
+            <h1 class="text-5xl font-extrabold mb-4">Título do Projeto</h1>
+            <p class="text-2xl">Nome da Turma</p>
+        </div>
+
+        <div id="slide-2" class="slide">
+            <h2 class="text-4xl font-bold mb-6">Membros da Equipe</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <img src="https://avatars.githubusercontent.com/u/109789436?v=4" alt="Rodrigo Rocha" class="w-32 h-32 rounded-full mx-auto mb-2">
+                    <p><strong>Rodrigo Rocha:</strong> Web Developer</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://avatars.githubusercontent.com/u/109789436?v=4" alt="Bruno Silva" class="w-32 h-32 rounded-full mx-auto mb-2">
+                    <p><strong>Bruno Silva:</strong> Gestor de Projeto</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://avatars.githubusercontent.com/u/109789436?v=4" alt="Melquisedeque" class="w-32 h-32 rounded-full mx-auto mb-2">
+                    <p><strong>Melquisedeque:</strong> Web Developer</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://avatars.githubusercontent.com/u/109789436?v=4" alt="Nelson Ferreira" class="w-32 h-32 rounded-full mx-auto mb-2">
+                    <p><strong>Nelson Ferreira:</strong> Web Developer</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide-3" class="slide">
+            <h2 class="text-4xl font-bold mb-4">Informações do Projeto - Slide 1</h2>
+            <p>Detalhes do projeto aqui...</p>
+        </div>
+
+        <div id="slide-4" class="slide">
+            <h2 class="text-4xl font-bold mb-4">Informações do Projeto - Slide 2</h2>
+            <p>Mais detalhes do projeto...</p>
+        </div>
+
+        <div id="slide-5" class="slide">
+            <h2 class="text-4xl font-bold mb-4">Informações do Projeto - Slide 3</h2>
+            <p>Outros detalhes importantes...</p>
+        </div>
+
+        <div class="text-center mt-8">
+            <button onclick="previousSlide()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full mr-2 transition duration-300">Anterior</button>
+            <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(slideIndex) {
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide-${slideIndex}`).classList.add('active');
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+</body>
+</html>
