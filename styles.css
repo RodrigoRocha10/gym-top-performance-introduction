@@ -1,0 +1,99 @@
+body {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.slide { 
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    
+    padding: 20px;
+    border-radius: 15px;
+}
+.active { 
+    display: block; 
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.list-custom {
+    display: grid;
+    gap: 20px;
+}
+.list-custom li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+.list-custom li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+.list-custom li i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.bg-opacity-20:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.custom-button-left, .custom-button-right {
+    background: lime;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+.custom-button-left:hover, .custom-button-right:hover {
+    background: rgb(145, 247, 145);
+    
+}
+.custom-button-left {
+    left: -120px;
+}
+.custom-button-right {
+    right: -40px;
+}
+.button-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 80px;
+}
+
+/* Adicionar estilos específicos para o cabeçalho e colaboradores */
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h1 span {
+    color: lime;
+}
+
+header .colaboradores {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.lime {
+    color: lime;
+}

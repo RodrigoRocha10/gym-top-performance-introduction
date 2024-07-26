@@ -6,133 +6,44 @@
     <title>Apresentação do Projeto</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        .slide { display: none; }
-        .active { display: block; animation: fadeIn 0.8s; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .list-custom {
-            counter-reset: section;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .list-custom li {
-            counter-increment: section;
-            position: relative;
-            padding-left: 3rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 1rem;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .list-custom li:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-        .list-custom li::before {
-            content: counter(section) ".";
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #3B82F6;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-        .list-custom li span {
-            display: inline-block;
-            margin-right: 1rem;
-            width: 2rem;
-            height: 2rem;
-            background: #3B82F6;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-        .bg-opacity-20:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-        .custom-button-left {
-            background: linear-gradient(90deg, rgba(37, 99, 235, 1) 0%, rgba(59, 130, 246, 1) 100%);
-            border: none;
-            padding: 10px;
-            color: white;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            left: -130px;
-        }
-        .custom-button-left:hover {
-            background: linear-gradient(90deg, rgba(37, 99, 235, 0.8) 0%, rgba(59, 130, 246, 0.8) 100%);
-            transform: scale(1.1);
-        }
-
-        .custom-button-right {
-            background: linear-gradient(90deg, rgba(37, 99, 235, 1) 0%, rgba(59, 130, 246, 1) 100%);
-            border: none;
-            padding: 10px;
-            color: white;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            right: -130px;
-        }
-        .custom-button-right:hover {
-            background: linear-gradient(90deg, rgba(37, 99, 235, 0.8) 0%, rgba(59, 130, 246, 0.8) 100%);
-            transform: scale(1.1);
-        }
-        .button-container {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            padding: 0 80px;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-gray-900 to-gray-700 min-h-screen flex items-center justify-center text-white relative">
-    <div class="w-full max-w-5xl p-10 bg-white bg-opacity-10 rounded-xl shadow-2xl backdrop-blur-md relative">
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center text-white relative bg-gray-900">
+    <div class="absolute top-0 left-0 p-4">
+        <h1 class="text-xl font-bold text-white">Ginásio <span class="lime">TOP-Performance</span></h1>
+    </div>
+    <div class="w-full max-w-6xl p-10 rounded-xl backdrop-blur-md relative bg-gray-800">
         <div id="slide-1" class="slide active text-center">
-            <h1 class="text-6xl font-extrabold mb-6">Título do Projeto</h1>
-            <p class="text-2xl font-light">Nome da Turma</p>
+            <h1 class="text-7xl font-extrabold mb-6">Ginásio <span class="lime"> TOP-Performance</span></h1>
+            <p class="text-3xl font-light">TPSIP06.23</p>
+            <div class="mt-4 text-xl font-light">
+                <p class="inline-block bg-gray-700 text-white py-1 px-3 rounded-lg mt-10">
+                    Equipa de Desenvolvimento:
+                    <ul>
+                        <li class="mt-1">Bruno Silva</li>
+                        <li class="mt-1">Melquisedeque Marins</li>
+                        <li class="mt-1">Nelson Ferreira</li>
+                        <li class="mt-1">Rodrigo Rocha</li>
+                    </ul>
+            </div>
         </div>
 
         <div id="slide-2" class="slide">
             <h2 class="text-5xl font-bold mb-8">Índice</h2>
             <ul class="list-custom text-2xl font-light list-inside">
-                <li><span>📘</span> Introdução</li>
-                <li><span>👥</span> Quem Vai Usar a App</li>
-                <li><span>⚙️</span> Funcionalidades</li>
-                <li><span>🛠️</span> Stacks Tecnológicas</li>
-                <li><span>🔍</span> Design Patterns</li>
+                <li class="flex items-center mb-4"><i class="fas fa-book mr-4 text-blue-500"></i> Introdução</li>
+                <li class="flex items-center mb-4"><i class="fas fa-users mr-4 text-green-500"></i> Quem vai utilizar a aplicação</li>
+                <li class="flex items-center mb-4"><i class="fas fa-cogs mr-4 text-yellow-500"></i> Funcionalidades</li>
+                <li class="flex items-center mb-4"><i class="fas fa-tools mr-4 text-red-500"></i> Stacks Tecnológicas</li>
+                <li class="flex items-center mb-4"><i class="fas fa-search mr-4 text-purple-500"></i> Design Patterns</li>
             </ul>
         </div>
 
         <div id="slide-3" class="slide">
             <h2 class="text-5xl font-bold mb-8">Introdução</h2>
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
-                <div class="backdrop-blur-md bg-black bg-opacity-30 p-10 rounded-lg">
+            <div class="relative bg-opacity-10 p-6 rounded-lg bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
+                <div class="absolute inset-0 rounded-lg"></div>
+                <div class="relative backdrop-blur-md bg-black bg-opacity-30 p-10 rounded-lg">
                     <p class="text-2xl font-light mb-6">Nosso cliente, Carlos Azevedo, desenvolvemos uma aplicação para auxiliar na gestão destes processos.</p>
                     <p class="text-2xl font-light mb-6">A aplicação possui três componentes principais: administração, treinador (PT) e cliente.</p>
                     <p class="text-2xl font-light mb-6">Na parte de administração, é possível gerir utilizadores, stock de produtos, packs, encomendas, matrículas, serviços, treinos, seguros e configurações do ginásio.</p>
@@ -144,9 +55,9 @@
         </div>
 
         <div id="slide-4" class="slide">
-            <h2 class="text-5xl font-bold mb-8">Quem Vai Usar a App</h2>
+            <h2 class="text-5xl font-bold mb-8">Quem vai utilizar a aplicação</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
                     <div class="flex items-center justify-center mb-4">
                         <span class="inline-block bg-blue-600 p-4 rounded-full">
                             <i class="text-white text-3xl">👑</i>
@@ -155,7 +66,7 @@
                     <h3 class="text-3xl font-semibold text-center mb-2">Administrador</h3>
                     <p class="text-xl font-light text-center">O administrador tem acesso a todas as funcionalidades da aplicação excluindo a aquisição de produtos e packs.</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
                     <div class="flex items-center justify-center mb-4">
                         <span class="inline-block bg-green-600 p-4 rounded-full">
                             <i class="text-white text-3xl">👥</i>
@@ -164,7 +75,7 @@
                     <h3 class="text-3xl font-semibold text-center mb-2">Colaboradores</h3>
                     <p class="text-xl font-light text-center">Os colaboradores têm acesso aos produtos e packs, às salas, treinos e tipos de treino.</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg transition transform hover:scale-105">
                     <div class="flex items-center justify-center mb-4">
                         <span class="inline-block bg-yellow-600 p-4 rounded-full">
                             <i class="text-white text-3xl">🧍</i>
@@ -179,61 +90,61 @@
         <div id="slide-5" class="slide">
             <h2 class="text-5xl font-bold mb-8">Funcionalidades Administrador</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">👥</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Utilizadores</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-green-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">📦</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Produtos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🎁</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Packs</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-red-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🏋️</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Treinos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-purple-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🏋️‍♂️</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Tipos de Treino</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-teal-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🏠</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Salas</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-pink-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">📋</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Matrículas</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-indigo-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🛡️</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Seguros</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-gray-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">💰</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Gerir Vendas</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">⚙️</i>
                     </span>
@@ -245,19 +156,19 @@
         <div id="slide-6" class="slide">
             <h2 class="text-5xl font-bold mb-8">Funcionalidades Colaborador</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-green-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🛒</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Adquirir Produtos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🏋️</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Marcação de Treinos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🔄</i>
                     </span>
@@ -269,31 +180,31 @@
         <div id="slide-7" class="slide">
             <h2 class="text-5xl font-bold mb-8">Funcionalidades Cliente</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">📅</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Verificar Agenda de Treinos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-green-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">📝</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Matricular-se</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">📆</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Agendar Treinos</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-red-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🎁</i>
                     </span>
                     <h3 class="text-2xl font-semibold text-center mb-2">Adquirir Packs</h3>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-purple-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🛒</i>
                     </span>
@@ -305,28 +216,28 @@
         <div id="slide-8" class="slide">
             <h2 class="text-5xl font-bold mb-8">Stacks Tecnológicas</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">💻</i>
                     </span>
                     <h3 class="text-3xl font-semibold text-center mb-2">Software</h3>
                     <p class="text-xl font-light text-center">Laravel</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-green-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">☁️</i>
                     </span>
                     <h3 class="text-3xl font-semibold text-center mb-2">Hosting</h3>
                     <p class="text-xl font-light text-center">AWS</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">🗄️</i>
                     </span>
                     <h3 class="text-3xl font-semibold text-center mb-2">Base de Dados</h3>
                     <p class="text-xl font-light text-center">PostgreSQL</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
                     <span class="inline-block bg-indigo-600 p-4 rounded-full mb-4">
                         <i class="text-white text-3xl">💳</i>
                     </span>
@@ -342,8 +253,9 @@
         </div>
         <div id="slide-10" class="slide">
             <h2 class="text-5xl font-bold mb-8">Conclusão</h2>
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
-                <div class="backdrop-blur-md bg-black bg-opacity-30 p-10 rounded-lg">
+            <div class="relative bg-opacity-10 p-6 rounded-lg bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
+                <div class="absolute inset-0 rounded-lg"></div>
+                <div class="relative backdrop-blur-md bg-black bg-opacity-30 p-10 rounded-lg">
                     <p class="text-2xl font-light mb-6">Nosso cliente, Carlos Azevedo, desenvolvemos uma aplicação para auxiliar na gestão destes processos.</p>
                     <p class="text-2xl font-light mb-6">A aplicação possui três componentes principais: administração, treinador (PT) e cliente.</p>
                     <p class="text-2xl font-light mb-6">Na parte de administração, é possível gerir utilizadores, stock de produtos, packs, encomendas, matrículas, serviços, treinos, seguros e configurações do ginásio.</p>
@@ -364,34 +276,6 @@
         </div>
     </div>
 
-    <script>
-        let currentSlide = 1;
-        const totalSlides = 10;
-
-        function showSlide(slideIndex) {
-            for (let i = 1; i <= totalSlides; i++) {
-                document.getElementById(`slide-${i}`).classList.remove('active');
-            }
-            document.getElementById(`slide-${slideIndex}`).classList.add('active');
-            document.getElementById('prev-button').style.display = slideIndex === 1 ? 'none' : 'flex';
-            document.getElementById('next-button').style.display = slideIndex === totalSlides ? 'none' : 'flex';
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides) {
-                currentSlide++;
-                showSlide(currentSlide);
-            }
-        }
-
-        function previousSlide() {
-            if (currentSlide > 1) {
-                currentSlide--;
-                showSlide(currentSlide);
-            }
-        }
-
-        showSlide(currentSlide);
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
