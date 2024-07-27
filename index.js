@@ -1,5 +1,16 @@
 let currentSlide = 1;
-const totalSlides = 10;
+const totalSlides = 12;
+
+function getCurrentSlideFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('slide') ? parseInt(params.get('slide')) : 1;
+}
+
+function updateURL(slideIndex) {
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', slideIndex);
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+}
 
 function showSlide(slideIndex) {
     const slides = document.querySelectorAll('.slide');
@@ -17,6 +28,7 @@ function nextSlide() {
     if (currentSlide < totalSlides) {
         currentSlide++;
         showSlide(currentSlide);
+        updateURL(currentSlide);
     }
 }
 
@@ -24,7 +36,9 @@ function previousSlide() {
     if (currentSlide > 1) {
         currentSlide--;
         showSlide(currentSlide);
+        updateURL(currentSlide);
     }
 }
 
+currentSlide = getCurrentSlideFromURL();
 showSlide(currentSlide);

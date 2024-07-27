@@ -13,7 +13,7 @@
     <h1 class="text-xl font-bold text-white">Ginásio <span class="lime">TOP-Performance</span></h1>
 </div>
 <div class="w-full max-w-6xl p-10 rounded-xl backdrop-blur-md relative bg-gray-800">
-    <div id="slide-1" class="slide active text-center">
+    <div id="slide-1" class="slide text-center">
         <h1 class="text-7xl font-extrabold mb-6">Ginásio <span class="lime"> TOP-Performance</span></h1>
         <p class="text-3xl font-light">TPSIP06.23</p>
         <div class="mt-4 text-xl font-light">
@@ -298,25 +298,81 @@
         </div>
     </div>
 
-
     <div id="slide-9" class="slide">
         <h2 class="text-5xl font-bold mb-8">Design Patterns</h2>
-        <p class="text-2xl font-light">Explanação dos padrões de design adotados na arquitetura do software.</p>
-    </div>
-    <div id="slide-10" class="slide">
-        <h2 class="text-5xl font-bold mb-8">Conclusão</h2>
-        <div class="relative bg-opacity-10 p-6 rounded-lg bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
-            <div class="absolute inset-0 rounded-lg"></div>
-            <div class="relative backdrop-blur-md bg-black bg-opacity-30 p-10 rounded-lg">
-                <p class="text-2xl font-light mb-6">Nosso cliente, Carlos Azevedo, desenvolvemos uma aplicação para auxiliar na gestão destes processos.</p>
-                <p class="text-2xl font-light mb-6">A aplicação possui três componentes principais: administração, treinador (PT) e cliente.</p>
-                <p class="text-2xl font-light mb-6">Na parte de administração, é possível gerir utilizadores, stock de produtos, packs, encomendas, matrículas, serviços, treinos, seguros e configurações do ginásio.</p>
-                <p class="text-2xl font-light mb-6">Na parte do cliente, é possível acessar a agenda de treinos, matricular-se, marcar treinos, adquirir packs e produtos.</p>
-                <p class="text-2xl font-light mb-6">Na parte do treinador (PT), é possível agendar treinos e adquirir produtos.</p>
-                <p class="text-2xl font-light mb-6">Esta aplicação visa facilitar a gestão interna e melhorar a experiência dos clientes e treinadores.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
+            <span class="inline-block bg-blue-600 p-4 rounded-full mb-4">
+                <i class="fas fa-code text-white text-3xl"></i>
+            </span>
+                <h3 class="text-3xl font-semibold text-center mb-2">MVC</h3>
+                <p class="text-xl font-light text-center">Separa a aplicação em Model, View e Controller, facilitando a manutenção e a escalabilidade.</p>
+            </div>
+
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
+            <span class="inline-block bg-green-600 p-4 rounded-full mb-4">
+                <i class="fas fa-shield-alt text-white text-3xl"></i>
+            </span>
+                <h3 class="text-3xl font-semibold text-center mb-2">Facades</h3>
+                <p class="text-xl font-light text-center">Utilizado para simplificar a interação com o Stripe e outros serviços.</p>
+            </div>
+
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
+            <span class="inline-block bg-red-600 p-4 rounded-full mb-4">
+                <i class="fas fa-eye text-white text-3xl"></i>
+            </span>
+                <h3 class="text-3xl font-semibold text-center mb-2">Observer Pattern</h3>
+                <p class="text-xl font-light text-center">Usado no Webhook de Pagamentos para Receber Respostas do Stripe.</p>
+            </div>
+
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105">
+            <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4">
+                <i class="fas fa-cogs text-white text-3xl"></i>
+            </span>
+                <h3 class="text-3xl font-semibold text-center mb-2">Service Provider</h3>
+                <p class="text-xl font-light text-center">Utilizado para integrar o Stripe na aplicação e configurar Serviços.</p>
             </div>
         </div>
     </div>
+
+    <div id="slide-10" class="slide">
+        <h2 class="text-5xl font-bold mb-8">Apresentação do Site</h2>
+        <div class="flex justify-center">
+            <a href="http://13.37.211.58" target="_blank" class="bg-lime text-gray-800 text-white py-3 px-6 mt-4 rounded-lg shadow-lg flex items-center transition transform hover:scale-105">
+                <i class="fas fa-globe text-2xl mr-2"></i>
+                <span class="text-2xl font-semibold">Visitar o Site</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="slide-11" class="slide">
+        <h2 class="text-5xl font-bold mb-8">Conclusão</h2>
+        <ul class="list-disc list-inside text-xl font-light mb-6">
+            <li class="mt-2">Este projeto foi uma excelente oportunidade de crescimento e aprendizado para a nossa equipa.</li>
+            <li class="mt-2">Desenvolver uma aplicação tão completa e personalizada para a gestão de um ginásio foi um desafio que nos motivou a inovar e superar expectativas.</li>
+            <li class="mt-2">A colaboração com o nosso cliente, Carlos Azevedo, foi fundamental para entender as necessidades e adaptar a solução de forma eficaz.</li>
+            <li class="mt-2">O facto de a aplicação ser utilizada por clientes finais aumentou o desafio, pois não se trata apenas de um sistema de back office, mas de uma solução que impacta diretamente a experiência do utilizador.</li>
+            <li class="mt-2">Estamos orgulhosos do resultado final e confiantes de que a aplicação trará grandes benefícios para a gestão do ginásio e a satisfação dos utilizadores.</li>
+        </ul>
+    </div>
+
+    <div id="slide-12" class="slide">
+        <h2 class="text-6xl font-bold text-center mb-8 lime">Obrigado!</h2>
+        <div class="flex justify-center">
+        <span class="inline-block bg-blue-600 p-4 rounded-full mb-4 mx-2">
+            <i class="fas fa-thumbs-up text-white text-3xl"></i>
+        </span>
+            <span class="inline-block bg-green-600 p-4 rounded-full mb-4 mx-2">
+            <i class="fas fa-smile text-white text-3xl"></i>
+        </span>
+            <span class="inline-block bg-yellow-600 p-4 rounded-full mb-4 mx-2">
+            <i class="fas fa-handshake text-white text-3xl"></i>
+        </span>
+        </div>
+    </div>
+
 
     <div class="button-container">
         <button id="prev-button" onclick="previousSlide()" class="custom-button-left absolute">
