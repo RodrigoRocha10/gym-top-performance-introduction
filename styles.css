@@ -3,16 +3,16 @@ body {
     background-size: cover;
 }
 
-.slide { 
-    display: none; 
+.slide {
+    display: none;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
-    
+
     padding: 20px;
     border-radius: 15px;
 }
-.active { 
-    display: block; 
+.active {
+    display: block;
     opacity: 1;
 }
 @keyframes fadeIn {
@@ -59,7 +59,7 @@ body {
 }
 .custom-button-left:hover, .custom-button-right:hover {
     background: rgb(145, 247, 145);
-    
+
 }
 .custom-button-left {
     left: -120px;
